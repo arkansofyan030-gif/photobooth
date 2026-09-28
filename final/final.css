@@ -1,0 +1,304 @@
+:root {
+    --cream: #f4f1ea;
+    --black: #111111;
+    --gray: #77736b;
+    --line: rgba(17, 17, 17, 0.15);
+    --red: #a33b32;
+    --display: "Space Grotesk", sans-serif;
+    --body: "DM Sans", sans-serif;
+    --mono: "DM Mono", monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--cream);
+    color: var(--black);
+    font-family: var(--body);
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.final-header {
+    height: 76px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 0 5vw;
+    border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    color: var(--black);
+    text-decoration: none;
+    font-family: var(--display);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.page-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.step {
+    justify-self: end;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--gray);
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.final-page {
+    min-height: calc(100vh - 76px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8vw;
+    padding: 6vh 8vw;
+}
+
+
+/* =========================
+   PREVIEW
+========================= */
+
+.final-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-label {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: var(--gray);
+}
+
+.strip-stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 520px;
+}
+
+.photostrip-final {
+    width: 270px;
+    background: white;
+    padding: 12px 12px 18px;
+    box-shadow: 0 25px 60px rgba(17, 17, 17, 0.14);
+    transform: rotate(-2deg);
+    position: relative;
+}
+
+#finalPhotos {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.final-photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.final-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.final-brand {
+    margin-top: 13px;
+    font-family: var(--display);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.final-date {
+    margin-top: 3px;
+    font-family: var(--mono);
+    font-size: 7px;
+    letter-spacing: 1px;
+    color: var(--gray);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.final-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 18px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--gray);
+}
+
+.final-intro h1 {
+    font-family: var(--display);
+    font-size: clamp(54px, 7vw, 96px);
+    line-height: 0.88;
+    letter-spacing: -5px;
+    margin-bottom: 25px;
+}
+
+.final-intro h1 span {
+    color: var(--red);
+}
+
+.final-intro p {
+    max-width: 390px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--gray);
+}
+
+
+/* =========================
+   META
+========================= */
+
+.final-meta {
+    margin-top: 55px;
+    border-top: 1px solid var(--line);
+}
+
+.meta-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.meta-row span:last-child {
+    color: var(--gray);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.final-actions {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.download-button,
+.secondary-button {
+    width: 100%;
+    min-height: 58px;
+    padding: 0 22px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.download-button {
+    background: var(--black);
+    color: white;
+}
+
+.secondary-button {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--black);
+}
+
+.download-button:hover,
+.secondary-button:hover {
+    transform: translateY(-3px);
+}
+
+.download-button:hover {
+    background: var(--red);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+    .final-header {
+        grid-template-columns: 1fr auto;
+        padding: 0 5vw;
+    }
+    .page-label {
+        display: none;
+    }
+    .final-page {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 7vw 70px;
+    }
+    .final-preview {
+        order: 1;
+    }
+    .final-content {
+        order: 2;
+    }
+    .strip-stage {
+        min-height: auto;
+    }
+    .photostrip-final {
+        width: 230px;
+    }
+    .final-content {
+        max-width: none;
+    }
+    .final-intro h1 {
+        font-size: 60px;
+        letter-spacing: -3px;
+    }
+}
